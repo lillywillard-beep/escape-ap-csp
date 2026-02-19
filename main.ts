@@ -26,33 +26,50 @@ let fruit = sprites.create(img`
 
 fruit.setPosition(80, 60)
 controller.moveSprite(fruit, 80, 80)
-
+scene.cameraFollowSprite(fruit)
 for (let i = 0; i < 5; i++) {
     let person = sprites.create(img`
-        ......ffff..............
-        ....fff22fff............
-        ...fff2222fff...........
-        ..fffeeeeeefff..........
-        ..ffe222222eef..........
-        ..fe2ffffff2ef..........
-        ..ffffeeeeffff......ccc.
-        .ffefbf44fbfeff....cddc.
-        .ffefbf44fbfeff...cddc..
-        .fee4dddddd4eef.ccddc...
-        fdfeeddddd4eeffecddc....
-        fbffee4444ee4fddccc.....
-        fbf4f222222f1edde.......
-        fcf.f222222f44ee........
-        .ff.f445544f............
-        ....ffffffff............
-        .....ff..ff.............
-        ........................
-        ........................
-        ........................
-        ........................
-        ........................
-        ........................
-        ........................
+        fffffffffceeeeeffffffffffffffff
+ffffffffccccccccbffffffffffffff
+fffffffcccfcccccccbbebfffffffff
+fffffbcccffcfcccccfeeebffffffff
+fffffccccffffccccccccceefffffff
+ffffccccfffffffccccccfeeeffffff
+ffffeeccfffffffcccfcfccceefffff
+ffffeccffffffffcccccffeccefffff
+ffffcfffffffffffffccffccefeffff
+ffffcfffffffffffccccccfeefcffff
+fffeffffffffffcceceefccceccffff
+fffeffffffccfcceeeeeffcceeeefff
+fffefffffccfffceeebbffcceceefff
+ffbecffffccfffceeebbcffccccefff
+ffeefffffccfffeeebbbeffcfccbfff
+ffeeffcfffcffceeeebbefffcceffff
+ffecffcfffffceeeeebbefcfcceffff
+ffcccfcffceeeeebbbbbbcfccceffff
+ff5fcfffceeeeeeeeebbbefceceffff
+fffccecceeeeeeccceeebbfccceffff
+fffcfbcccfeeeeeeeeeebbfccebffff
+fffcfbeeeeceeeeeeeeebbfceeeffff
+fffcfbeeeeceeeccceeebbeeeeeffff
+fffeebeecfceeeecccebbbbeedeffff
+ffffcbeecceeebeeeeebb4beeebffff
+ffffebeeeeeeebeeeeeebb4eeefffff
+fffffbbeeeeeebbbeeeebbb4ebfffff
+fffffbeeeeebebbeeeeebbb4bbfffff
+fffffbeeeeeeebbeeeeeeb44befffff
+ffffffeeeeeeeeeeeeeebb44ecfffff
+ffffffeeeeecceeeeeebbbb4eefffff
+ffffffbeeeeecceeeeebbbbdbefffff
+ffffffbeeeeccccceeebbb44dfbffff
+fffffffeeecceeecceebbbb4dfcebbb
+fffffffeeeeeeceeeeebbbe44fcceeb
+fffffffbeeeeeeeeeeeebee4bfccceb
+fffffff5eeeeeeebbeebbeebbfccccb
+ffffffffbeebeeebbbeeeeebcfccfcb
+fffffffffeeeeeeeeeeeeeeecfccfce
+ffffffffffeecccccccceeeccfcfffb
+ffffffdefffecccccccceeeccffffcb
     `, SpriteKind.Person)
     person.setPosition(randint(0, screen.width), randint(0, screen.height))
     person.follow(fruit, 40)
