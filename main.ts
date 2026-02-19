@@ -3,6 +3,8 @@ namespace SpriteKind {
     export const Fruit = SpriteKind.create()
 }
 
+tiles.setCurrentTilemap(tilemap`level1`)
+
 let fruit = sprites.create(img`
     . . . . . . . 6 . . . . . . . .
     . . . . . . 8 6 6 . . . 6 8 . .
