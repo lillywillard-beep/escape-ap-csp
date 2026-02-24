@@ -1,3 +1,4 @@
+ //yay
  namespace SpriteKind {
     export const Person = SpriteKind.create()
     export const Fruit = SpriteKind.create()
